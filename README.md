@@ -1,38 +1,54 @@
-# TechPoint Website
+⚡ TechPoint Website
 
-A responsive IT services website for TechPoint Computers.
+A modern and responsive technology portfolio website built to showcase web development, AI & Data Science, software projects, and my learning journey.
 
-## About
+🌐 Live Website
 
-TechPoint provides computer, laptop, CCTV, networking and IT support services.
+https://aakashhh23082007.github.io/techpoint-website/
 
-## Features
+🚀 Features
 
-- Home page
-- Services section
-- Products section
-- Gallery
-- Contact section
-- Get a Quote
-- Responsive design
-- Interactive navigation
+- 🏠 Modern Home section
+- 💻 Services section
+- 📂 Projects showcase
+- 👨‍💻 About TechPoint
+- 🛠️ Skills section
+- 📩 Functional Contact Form
+- 📱 Responsive design
+- ⚡ GitHub Pages deployment
 
-## Technologies Used
+🛠️ Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
+- Git & GitHub
+- GitHub Pages
 
-## Project Structure
+📂 Projects
 
-- `index.html` – Main website page
-- `style.css` – Website styling
-- `script.js` – JavaScript functionality
+🌐 TechPoint Website
 
-## Author
+My first personal technology portfolio website.
+
+🐾 Paw Sense
+
+An AI-powered pet body language learning project.
+
+🏥 HealthEasy
+
+An AI-powered hospital management project concept.
+
+🎯 Purpose
+
+TechPoint was created as my first website project to learn web development, practice GitHub and deployment, and showcase my technology projects.
+
+👨‍💻 Developer
 
 Aakash Jangam
 
-## License
+Diploma in Computer Engineering
 
-This project is created for learning and portfolio purposes.
+---
+
+⭐ If you like this project, feel free to explore the repository and live website.
