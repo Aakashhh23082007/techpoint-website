@@ -1,135 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TechPoint Computers - interactive demo website for a local computer shop.">
-<title>TechPoint Computers | Interactive Demo</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechPoint | Technology & Innovation</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #11182d;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #26304d;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #4da6ff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #4da6ff;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 8%;
+      background: linear-gradient(135deg, #0b1020, #182b52);
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #4da6ff;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #c8d0e0;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 28px;
+      background: #4da6ff;
+      color: #08101f;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 45px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #151e35;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #273451;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #4da6ff;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #4da6ff;
+    }
+
+    .card p {
+      color: #c8d0e0;
+    }
+
+    .about {
+      text-align: center;
+      background: #10172a;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      color: #c8d0e0;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #c8d0e0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #080d19;
+      color: #9ba6bb;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav ul {
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="logo" href="#home">Tech<span>Point</span></a>
-    <div class="nav-actions">
-      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
-      <button class="menu" onclick="toggleMenu()">☰</button>
-    </div>
-    <nav id="navLinks">
-      <a href="#home">Home</a><a href="#services">Services</a><a href="#products">Products</a>
-      <a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
 
-<div class="offer"><span>⚡</span> Free consultation on computer & CCTV requirements <a href="#contact">Book now →</a></div>
+  <nav>
+    <div class="logo">Tech<span>Point</span></div>
 
-<main>
-<section id="home" class="hero">
-  <div class="container hero-content reveal">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
     <div>
-      <p class="eyebrow">YOUR LOCAL IT PARTNER</p>
-      <h1>Technology that <span>works for you.</span></h1>
-      <p class="hero-text">Computers, laptops, CCTV, networking and reliable IT support — all under one roof.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#contact">Get a Quote</a>
-        <a class="btn secondary" href="#services">Explore Services</a>
+      <h1>Welcome to <span>TechPoint</span></h1>
+
+      <p>
+        Explore technology, software development, artificial intelligence
+        and innovative digital solutions.
+      </p>
+
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="title">Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>💻 Web Development</h3>
+        <p>
+          Modern, responsive and user-friendly websites built with
+          modern web technologies.
+        </p>
       </div>
-      <div class="mini-trust"><span>★ 4.9 Rating</span><span>✓ Trusted Service</span><span>⚡ Quick Support</span></div>
+
+      <div class="card">
+        <h3>🤖 AI & Data Science</h3>
+        <p>
+          Explore artificial intelligence, machine learning and
+          data-driven technology solutions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Software Development</h3>
+        <p>
+          Build useful software applications designed to solve
+          real-world problems.
+        </p>
+      </div>
+
     </div>
-    <div class="hero-card">
-      <div class="floating">POPULAR</div>
-      <div class="device">💻</div>
-      <h3>Need help choosing?</h3>
-      <p>Tell us what you need and get a quick recommendation.</p>
-      <button class="btn primary full" onclick="openQuote('General Enquiry')">Ask for Help</button>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="services" class="section">
-<div class="container">
-<p class="eyebrow">WHAT WE DO</p><h2>Choose a service</h2>
-<div class="grid service-grid">
-  <article class="card service-card reveal" onclick="openQuote('Laptop & PC')"><div class="card-icon">💻</div><h3>Laptop & PC</h3><p>Sales, setup, upgrades and repair.</p><button>Get quote →</button></article>
-  <article class="card service-card reveal" onclick="openQuote('CCTV & Security')"><div class="card-icon">📹</div><h3>CCTV & Security</h3><p>Camera supply, installation and setup.</p><button>Get quote →</button></article>
-  <article class="card service-card reveal" onclick="openQuote('Networking')"><div class="card-icon">🌐</div><h3>Networking</h3><p>Wi-Fi, LAN, router and office solutions.</p><button>Get quote →</button></article>
-  <article class="card service-card reveal" onclick="openQuote('Computer Repair')"><div class="card-icon">🔧</div><h3>Computer Repair</h3><p>Hardware and software troubleshooting.</p><button>Get quote →</button></article>
-</div>
-</div>
-</section>
+  <section class="about" id="about">
+    <h2 class="title">About TechPoint</h2>
 
-<section id="products" class="section light">
-<div class="container">
-<p class="eyebrow">PRODUCT FINDER</p><h2>What are you looking for?</h2>
-<div class="filters">
-  <button class="filter active" onclick="filterProducts('all',this)">All</button>
-  <button class="filter" onclick="filterProducts('computer',this)">Computers</button>
-  <button class="filter" onclick="filterProducts('security',this)">Security</button>
-  <button class="filter" onclick="filterProducts('accessory',this)">Accessories</button>
-</div>
-<div class="grid products">
-  <article class="product reveal" data-type="computer">
-    <div class="product-img">💻</div><span>💻</span><h3>Laptops</h3><p>Study, office and business use.</p><div class="price">From ₹25,000</div>
-    <button onclick="openQuote('Laptop')">Enquire on WhatsApp →</button>
-  </article>
+    <p>
+      TechPoint is a technology-focused platform created to explore
+      software development, artificial intelligence, programming and
+      modern digital innovation.
+    </p>
+  </section>
 
-  <article class="product reveal" data-type="computer"><div class="product-img">🖥️</div><span>🖥️</span><h3>Desktop PCs</h3><p>Custom and ready-to-use systems.</p><div class="price">Custom Build</div><button onclick="openQuote('Desktop PC')">Enquire on WhatsApp →</button></article>
-  <article class="product reveal" data-type="security"><div class="product-img">📷</div><span>📷</span><h3>CCTV Cameras</h3><p>Security cameras and accessories.</p><div class="price">Site Visit Available</div><button onclick="openQuote('CCTV')">Enquire on WhatsApp →</button></article>
-  <article class="product reveal" data-type="accessory"><div class="product-img">⌨️</div><span>⌨️</span><h3>Accessories</h3><p>Keyboard, mouse, storage and more.</p><div class="price">Multiple Options</div><button onclick="openQuote('Accessories')">Enquire on WhatsApp →</button></article>
-</div>
-</div>
-</section>
+  <section id="contact" class="contact">
+    <h2 class="title">Let's Connect</h2>
 
-<section class="section highlight">
-<div class="container highlight-grid">
-  <div><p class="eyebrow">SMART SHOPPING</p><h2>Not sure what you need?</h2><p>Answer 3 quick questions and we'll suggest a starting point.</p><button class="btn primary" onclick="startFinder()">Start Product Finder</button></div>
-  <div class="steps"><div><b>01</b><span>Tell us your use</span></div><div><b>02</b><span>Choose your budget</span></div><div><b>03</b><span>Get a recommendation</span></div></div>
-</div>
-</section>
+    <p>
+      Interested in technology and innovation? Explore TechPoint and
+      start building something amazing.
+    </p>
 
-<section id="gallery" class="section">
-<div class="container"><p class="eyebrow">OUR WORK</p><h2>Gallery</h2>
-<div class="gallery">
-  <div class="gallery-item">🖥️<span>Computer Setup</span></div>
-  <div class="gallery-item">📹<span>CCTV Installation</span></div>
-  <div class="gallery-item">🌐<span>Networking</span></div>
-  <div class="gallery-item">💻<span>Laptop Service</span></div>
-</div></div>
-</section>
+    <a href="mailto:techpoint@example.com" class="btn">Contact Us</a>
+  </section>
 
-<section class="section light">
-<div class="container"><p class="eyebrow">CUSTOMER FEEDBACK</p><h2>What customers say</h2>
-<div class="grid">
-<article class="review"><div>★★★★★</div><p>“Very helpful service and good guidance.”</p><strong>— Customer</strong></article>
-<article class="review"><div>★★★★★</div><p>“Quick response and professional support.”</p><strong>— Customer</strong></article>
-<article class="review"><div>★★★★★</div><p>“Good quality products at reasonable prices.”</p><strong>— Customer</strong></article>
-</div></div>
-</section>
+  <footer>
+    <p>© 2026 TechPoint. All Rights Reserved.</p>
+  </footer>
 
-<section id="contact" class="section contact">
-<div class="container contact-grid">
-<div><p class="eyebrow">GET IN TOUCH</p><h2>Let's talk about your requirement</h2>
-<p>📍 Shop No. 10, Main Market, Mumbai, Maharashtra</p><p>📞 +91 90000 00000</p><p>🕐 Mon–Sun: 10:00 AM – 8:00 PM</p>
-<div class="buttons"><a class="btn primary" href="tel:+919000000000">Call Now</a><a class="btn whatsapp" href="https://wa.me/919000000000" target="_blank">WhatsApp</a></div></div>
-<div class="contact-box"><h3>Quick Enquiry</h3><input id="name" placeholder="Your name"><input id="phone" placeholder="Phone number"><select id="need"><option>Choose requirement</option><option>Laptop / PC</option><option>CCTV</option><option>Repair</option><option>Networking</option></select><textarea id="message" placeholder="Tell us what you need"></textarea><button class="btn primary full" onclick="sendEnquiry()">Send Enquiry</button><small id="formMsg"></small></div>
-</div>
-</section>
-</main>
-
-<footer><div class="container footer"><p>© 2026 TechPoint Computers. Interactive demo.</p><a href="#home">↑ Top</a></div></footer>
-
-<div id="modal" class="modal" onclick="closeModal(event)">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <button class="close" onclick="closeModal()">×</button>
-    <h2 id="modalTitle">Quick Enquiry</h2>
-    <p id="modalText">Tell us what you need.</p>
-    <input id="modalName" placeholder="Your name">
-    <input id="modalPhone" placeholder="Phone number">
-    <button class="btn primary full" onclick="submitModal()">Continue</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
